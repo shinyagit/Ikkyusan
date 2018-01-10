@@ -1,0 +1,150 @@
+#footer-top
+  .footer-wrap-A
+    .locate
+      .map
+      .map
+    .contact
+
+      .calendar
+        %h2.header-B 診療時間
+        .calendar-wrapper
+          .calendar-box
+            %h3 東雲店
+            %table
+              %thead
+                %tr
+                  %th 受付時間
+                  %th 月
+                  %th 火
+                  %th 水
+                  %th 木
+                  %th 金
+                  %th 土
+                  %th 日・祝
+              %tbody
+                %tr
+                  %td 9:00 ~ 12:30
+                  %td ○
+                  %td ○
+                  %td ○
+                  %td ○
+                  %td ○
+                  %td ○
+                  %td ○
+                %tr
+                  %td 15:00 ~ 18:30
+                  %td ○
+                  %td ○
+                  %td ○
+                  %td ○
+                  %td ○
+                  %td ○
+                  %td ○
+            %p ※火曜日は20:30が最終受付となります。
+            %p ※日曜日は診療時間が9:30~16:30となります。
+
+          .calendar-box
+            %h3 宇品店
+            %table
+              %thead
+                %tr
+                  %th 受付時間
+                  %th 月
+                  %th 火
+                  %th 水
+                  %th 木
+                  %th 金
+                  %th 土
+                  %th 日・祝
+              %tbody
+                %tr
+                  %td 9:00 ~ 12:30
+                  %td ○
+                  %td ○
+                  %td ○
+                  %td ○
+                  %td ○
+                  %td ○
+                  %td ×
+                %tr
+                  %td 15:00 ~ 18:30
+                  %td ○
+                  %td ○
+                  %td ○
+                  %td ○
+                  %td ○
+                  %td ○
+                  %td ×
+
+      .tel-box
+        %h2.header-B 電話でのご予約はこちら
+        %p
+          【東雲店】
+          %span.number 082-284-4511
+          %a{ href: 'tel:082-284-4511', class: 'tel-btn' }
+            東雲店に電話する
+        %p
+          【宇品店】
+          %span.number 082-255-7119
+          %a{ href: 'tel:082-255-7119', class: 'tel-btn' }
+            宇品店に電話する
+
+  .footer-wrap-B
+    %h2.header-B アクセス
+    .map-wrap
+      %div
+        %h3 【東雲店】
+        %p
+          〒734-0023
+          %br
+          広島県広島市南区東雲本町2丁目10-30
+        .map
+          %iframe.content{:allowfullscreen => "", :frameborder => "0", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3292.757638230562!2d132.4848543152597!3d34.382083980517464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355aa1e41e78d9f7%3A0xc7c88e464918db68!2z44G744Gt44Gk44GO5LiA5LyR44GV44KT5p2x6Zuy5bqX!5e0!3m2!1sja!2sjp!4v1512533306336", :style => "border:0"}
+      %div
+        %h3 【宇品店】
+        %p
+          〒734-0004
+          %br
+          広島県広島市南区宇品神田1丁目8-11 ハイポート宇品 1F
+        .map
+          %iframe.content{:allowfullscreen => "", :frameborder => "0", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3293.3812657156454!2d132.46249531525925!3d34.3662219805216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355aa22e674176e5%3A0xe7cc897440b2782f!2z44G744Gt44Gk44GO5LiA5LyR44GV44KT5a6H5ZOB5bqX!5e0!3m2!1sja!2sjp!4v1512533872999", :style => "border:0"}
+
+#footer-bottom
+  .footer-wrap
+    .foot-A
+      %h2 ほねつぎ一休さん
+      %p
+        【東雲店】
+        %br
+        〒734-0023 広島県広島市南区東雲本町2丁目10-30
+        %br
+        Tel：
+        = link_to '082-284-4511', 'tel:082-284-4511'
+        %br
+        Mail：
+        = link_to 'shinonome@193net.com', 'mailto:shinonome@193net.com'
+
+      %p
+        【宇品店】
+        %br
+        〒734-0004 広島県広島市南区宇品神田1丁目8-11 ハイポート宇品 1F
+        %br
+        Tel：
+        = link_to '082-255-7119', 'tel:082-255-7119'
+        %br
+        Mail：
+        = link_to 'ujina@193net.com', 'mailto:ujina@193net.com'
+
+
+    .foot-B
+      %ul#footer-nav
+        %h3 メニュー
+        %li= link_to 'ホーム', '/'
+        %li= link_to '交通事故対応', '/'
+        %li= link_to 'スタッフ', '/'
+        %li= link_to 'メニュー', '/'
+        %li= link_to '料金', '/'
+        %li= link_to 'アクセス', '/'
+
+  .copy-right
+    Copyright ©️ 2017 ほねつぎ一休さん All Rights Reserved. designed by shinya

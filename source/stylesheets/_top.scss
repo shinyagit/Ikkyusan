@@ -1,0 +1,170 @@
+@charset "UTF-8";
+
+body {
+  font-family: '游明朝体','YuMincho','ヒラギノ明朝 ProN W3','Hiragino Mincho ProN','HiraMinProN-W3';
+}
+
+.prefix::before {
+  content: "";
+
+}
+
+.headding-A, .header-B {
+  position: relative;
+  font-size: 24px;
+  font-weight: bold;
+  padding-left: 40px;
+
+  &::before, &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    border-radius: 50%;
+  }
+  &::before {
+    top: calc(50% - 15px);
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(150, 0, 0);
+  }
+  &::after {
+    top: calc(50% - 10px);
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+  }
+}
+
+.header-B {
+  font-size: 20px;
+
+  &::before {
+    background-color: rgb(25, 120, 0);
+  }
+}
+
+section {
+  margin-bottom: 100px;
+}
+
+// 主にトップページのスタイルを定義します
+#yield-wrapper {
+  flex: 1;
+  padding: 20px;
+}
+
+// ============ 交通事故対応 =============
+#traffic-actident {
+  width: 100%;
+  padding: 10px;
+  box-shadow: 3px 3px 6px 2px #ddd;
+
+  h3 {
+    font-size: 14px;
+    padding: 0 10px;
+    background-color: rgb(160, 0, 0);
+    display: inline-block;
+    color: #fff;
+  }
+
+  p {
+    font-size: 14px;
+    padding-left: 1em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+// ============ お悩み ===============
+#trouble {
+  width: 100%;
+
+  .trouble-wrapper {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    .trouble-box {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      margin: 20px 10px 0 10px;
+      // box-shadow: 2px 2px 4px 2px #ddd;
+      border: 1px solid #ccc;
+
+      h3 {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #fff;
+      }
+
+      p {
+        position: absolute;
+        bottom: 5px;
+        left: 20px;
+        font-size: 10px;
+        color: #fff;
+      }
+
+      .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 54px;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+}
+
+// ============ 取り組み ==========
+#effort {
+  width: 100%;
+
+  ul {
+    padding-top: 10px;
+  }
+
+  .effort-list {
+    position: relative;
+    padding: 10px 20px;
+    margin-left: 20px;
+
+    h3 {
+      margin-left: 20px;
+      position: relative;
+      font-size: 18px;
+
+      &::before, &::after {
+        content: "";
+        position: absolute;
+        top: calc(50% - 10px);
+        left: -40px;
+        width: 20px;
+        height: 20px;
+
+        border: 3px solid rgb(200, 0, 0);
+      }
+      &::after {
+        top: calc(50% - 15px);
+        left: -30px;
+        width: 20px;
+        height: 20px;
+        background-color: rgba(200, 0, 0, 0.5);
+        border: rgba(200, 0, 0, 0.5);
+      }
+    }
+    p {
+      font-size: 14px;
+      color: #4a4a4a;
+    }
+  }
+}

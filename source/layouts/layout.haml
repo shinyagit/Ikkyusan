@@ -1,0 +1,41 @@
+!!!
+%html
+  %head
+    %meta{charset: 'utf-8'}
+    %meta{content: "ie=edge", http:{equiv: "x-ua-compatible"}}
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no'}
+    %meta{name: "format-detection", content: "telephone=no"}
+    %meta{content: 'タイトル', name: 'title'}
+    %meta{content: 'サイト説明', name: 'description'}
+    -# %meta{content: 'キーワード', name: 'keywords'}
+    %meta{property: 'og:type', content: 'website'}
+    %meta{property: 'og:image', content: ''}
+    %meta{property: 'og:title', content: ''}
+    %meta{property: 'og:description', content: ''}
+    %meta{property: 'og:url', content: ''}
+    %meta{property: 'og:site_name', content: ''}
+    %meta{property: 'og:locale', content: 'ja_JP'}
+    -# %meta{property: 'fb:admins', content: ''}
+    -# %meta{property: 'fb:app_id', content: ''}
+    -# %meta{content: 'summary' name: 'twitter:card'}
+    -# %meta{content: '@twitter_acount' name: 'twitter:site'}
+    %title 広島市の接骨院ほねつぎ一休さん|東雲|宇品|交通事故対応
+    -# import css files
+    = stylesheet_link_tag 'site'
+
+    -# favicon の一括生成はこちらから https://ao-system.net/favicon/
+    -# html to haml http://htmltohaml.com/
+  %body
+    = partial '/partials/header'
+    #drw-layer
+    #wrapper
+      #yield-wrapper
+        = yield
+      = partial '/partials/side-menu'
+
+
+    = partial '/partials/footer'
+    = javascript_include_tag 'lib/jquery-3.1.1'
+    -# import javascript files
+    = javascript_include_tag 'site'
+    = javascript_include_tag 'lib/vegas/vegas'

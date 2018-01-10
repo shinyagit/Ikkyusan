@@ -1,0 +1,534 @@
+@charset "UTF-8";
+
+// パーシャル部分のスタイルを定義
+#header {
+  // background-color: #4a4a4a;
+
+  #header-wrapper {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 130px);
+    margin-top: 80px;
+    display: flex;
+  }
+
+  #header-bar {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #197800;
+    transition: all 0.5s;
+
+    #brand {
+      font-size: 24px;
+      line-height: 60px;
+      color: #fff;
+      padding: 0 20px;
+    }
+
+    #header-msg {
+      width: 100%;
+      padding: 2px 60px 2px 20px;
+      font-size: 12px;
+      background-color: #197800;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      color: #fff;
+    }
+  }
+}
+
+#header-nav {
+  position: relative;
+  z-index: 50;
+  width: 100%;
+  background-color: #197800;
+  box-shadow: 0px -2px 4px -2px #333;
+
+  ul {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+
+    li {
+      display: block;
+      width: 16.6%;
+
+      a {
+       display: block;
+       padding: 10px 0;
+       font-size: 16px;
+       font-weight: bold;
+       text-align: center;
+       color: #fff;
+       text-decoration: none;
+       transition: all 0.2s linear;
+
+       &:hover {
+         color: #197800;
+         background-color: #fff;
+         transition: all 0.2s linear;
+         // text-decoration-line: underline;
+       }
+     }
+    }
+  }
+}
+
+
+#drw-btn {
+  display: none;
+  z-index: 200;
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  height: 50px;
+  width: 50px;
+  padding: 14px 10px 10px 10px;
+  // background-color: rgba(#fff, 0.5);
+  border-radius: 3px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.5s ease;
+
+  // &:hover {background-color: rgba(#fff, 0.5);}
+
+  .icon-bar {
+    height: 4px;
+    display: block;
+    margin-bottom: 6px;
+    border-radius: 3px;
+    background-color: #fff;
+    transition: all 0.5s ease;
+  }
+}
+
+#drw-btn.open {
+  transition: all 0.5s ease;
+
+  .icon-bar:first-child {
+    transition: all 0.5s ease;
+    transform: translate(0, 10px) rotate(45deg);
+  }
+  .icon-bar:nth-child(3) {
+    transition: all 0.5s ease;
+    transform: translate(0, -10px) rotate(-45deg);
+  }
+  .icon-bar:nth-child(2) {
+    transition: all 0.5s ease;
+    transform: translateX(-100px);
+  }
+}
+
+#drw-btn.color .icon-bar {background-color: #333;}
+#drw-layer {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  right: -100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease;
+}
+
+#drw-layer.cover {
+  transition: all 0.5s ease;
+  right: 0;
+}
+
+.fixed {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  #drw-btn {display: block;}
+  #header-nav {
+    z-index: 150;
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 240px;
+    height: 100vh;
+
+    ul {
+      padding-top: 60px;
+      display: block;
+
+      li {
+        width: 100%;
+      }
+    }
+  }
+
+  #header-nav.slide-in {
+    transition: all 0.5s ease;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #header #header-wrapper {height: 350px !important;}
+  #left-slide, #right-slide {height: 350px !important;}
+}
+
+#intro {
+  width: 100%;
+  padding: 40px 5px;
+  background-color: #fff;
+
+  p {
+    text-align: center;
+    font-size: 14px;
+    font-family: '游明朝体','YuMincho','ヒラギノ明朝 ProN W3','Hiragino Mincho ProN','HiraMinProN-W3';
+
+    &:first-child {
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #intro p {
+    font-size: 12px;
+
+    &:first-child {
+      font-size: 16px;
+    }
+  }
+}
+
+// =================== tel-box ===================
+.tel-box {
+  margin: 0 auto;
+  font-size: 14px;
+  margin-bottom: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 0 10px 10px;
+  background-image: -webkit-linear-gradient(#fff 0%, #eee 100%);
+background-image: linear-gradient(#fff 0%, #eee 100%);
+text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+box-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
+
+  h2 {margin-bottom: 10px;}
+
+  p {
+    vertical-align: middle;
+    margin-bottom: 5px;
+
+    .number {font-size: 20px;font-weight: bold;color: rgb(200, 0, 0);}
+    .tel-btn {
+      transform: translateY(-3px);
+      display: inline-block;
+      margin-left: 5px;
+      padding: 3px 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 12px;
+      background-image: -webkit-linear-gradient(#fff 0%, #eee 100%);
+      background-image: linear-gradient(#fff 0%, #eee 100%);
+      text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
+      color: #333;
+      text-decoration: none;
+
+      &:active{/*押したとき*/
+        -ms-transform: translateY(-1px);
+        -webkit-transform: translateY(-1px);
+        transform: translateY(-1px);/*沈むように*/
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+        background-image: -webkit-linear-gradient(#fff 0%, #fff 100%);
+        background-image: linear-gradient(#fff 0%, #fff 100%);/*グラデーションを明るく*/
+      }
+    }
+  }
+}
+
+// =============== カレンダー =====================
+.calendar {
+  width: 100%;
+
+  .calendar-box {
+    width: 300px;
+    padding-top: 10px;
+    margin: 0 auto;
+
+    h3 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    table {
+      width: 300px;
+      font-size: 14px;
+      border-collapse: collapse;
+
+      th, td {
+        text-align: center;
+        padding: 0 3px;
+        font-weight: bold;
+        border: 1px solid #333;
+      }
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (max-width:900px) {
+  .calendar-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    .calendar-box {
+      padding: 10px;
+    }
+  }
+}
+
+
+
+// ======================= sns =================
+.sns {
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  #side-menu {
+    .sns {
+      display: none;
+    }
+  }
+}
+
+// ============== ピックアップ =============
+.pickup {
+  margin: 30px 0px 0px;
+  height: 300px;
+  border: 1px solid #333;
+
+  p {
+    vertical-align: middle;
+    text-align: center;
+    font-size: 20px;
+  }
+}
+
+// ================ wrapper ============
+
+#wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+
+// ========== side menu ============
+#side-menu {
+  width: 340px;
+  padding: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  #wrapper {
+    display: block;
+  }
+
+  #side-menu {
+    display: none;
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+// =============== footer ====================
+#footer-top {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .footer-wrap-A {
+    .calendar-box {
+      width: 80%;
+      margin: 0 auto;
+
+      table {
+        width: 100%;
+      }
+    }
+
+    .contact {
+
+      .tel-box {
+        display: table;
+        padding: 10px 20px;
+
+        p {
+          margin-bottom: 10px;
+          font-size: 16px;
+          .number {font-size: 16px;}
+          .tel-btn {font-size: 12px;padding: 5px;}
+        }
+      }
+
+      .calendar {
+        flex: 1;
+        margin-bottom: 80px;
+      }
+    }
+  }
+
+
+  .footer-wrap-B {
+    margin-top: 50px;
+
+    .map-wrap {
+      display: flex;
+      width: 100%;
+
+      div {
+        width: 100%;
+        padding: 10px;
+
+        h3 {
+          font-size: 18px;
+          font-weight: bold;
+        }
+
+        p {
+          font-size: 14px;
+          padding: 10px 20px;
+          background-color: rgba(0, 0, 0, 0.7);
+          color: #fff;
+        }
+
+        .map {
+          position: relative;
+          width: 100%;
+
+          &::before {
+            content:"";
+            display: block;
+            padding-top: 56.25%; /* 高さと幅の比を16:9に固定。9/16*100=56.25 */
+          }
+
+          .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+#footer-bottom {
+  width: 100%;
+  background-color: #197800;
+  color: #fff;
+
+  .footer-wrap {
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    padding: 40px 20px;
+  }
+
+  .foot-A {
+    flex: 3;
+
+    h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 14px;
+      margin-bottom: 20px;
+
+      a {color: #fff;}
+    }
+  }
+
+  .foot-B {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+
+
+    #footer-nav {
+      width: 100%;
+      text-align: center;
+
+      h3 {
+        font-size: 18px;
+        border-bottom: 2px solid #fff;
+      }
+
+      li a {
+        display: block;
+        padding: 5px 10px;
+        font-size: 14px;
+        color: #fff;
+        margin: 2px 0;
+        text-decoration: none;
+
+        &:hover {
+          background-color: #fff;
+          color: #197800;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .copy-right {font-size: 14px; color: #fff;text-align: center;padding: 0px 10px 20px 10px;}
+}
+
+@media screen and (max-width:800px) {
+  #footer-top {
+    display: block;
+  }
+
+  #footer-top .footer-wrap-A {
+    .calendar-box {
+      width: 100%;
+    }
+  }
+
+  #footer-top .footer-wrap-B {
+    .map-wrap {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #footer-bottom .footer-wrap {
+    display: block;
+
+    .foot-B {
+      width: 100%;
+
+      #footer-nav {
+        text-align: left;
+      }
+    }
+  }
+}

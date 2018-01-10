@@ -1,0 +1,104 @@
+#side-menu
+  .tel-box
+    %h2.header-B 電話でのご予約はこちら
+    %p
+      【東雲店】
+      %span.number 082-284-4511
+      %a{ href: 'tel:082-284-4511', class: 'tel-btn' }
+        電話する
+    %p
+      【宇品店】
+      %span.number 082-255-7119
+      %a{ href: 'tel:082-255-7119', class: 'tel-btn' }
+        電話する
+
+  .calendar
+    %h2.header-B 診療時間
+    .calendar-wrapper
+      .calendar-box
+        %h3 東雲店
+        %table
+          %thead
+            %tr
+              %th 受付時間
+              %th 月
+              %th 火
+              %th 水
+              %th 木
+              %th 金
+              %th 土
+              %th 日・祝
+          %tbody
+            %tr
+              %td 9:00 ~ 12:30
+              %td ○
+              %td ○
+              %td ○
+              %td ○
+              %td ○
+              %td ○
+              %td ○
+            %tr
+              %td 15:00 ~ 18:30
+              %td ○
+              %td ○
+              %td ○
+              %td ○
+              %td ○
+              %td ○
+              %td ○
+        %p ※火曜日は20:30が最終受付となります。
+        %p ※日曜日は診療時間が9:30~16:30となります。
+
+      .calendar-box
+        %h3 宇品店
+        %table
+          %thead
+            %tr
+              %th 受付時間
+              %th 月
+              %th 火
+              %th 水
+              %th 木
+              %th 金
+              %th 土
+              %th 日・祝
+          %tbody
+            %tr
+              %td 9:00 ~ 12:30
+              %td ○
+              %td ○
+              %td ○
+              %td ○
+              %td ○
+              %td ○
+              %td ×
+            %tr
+              %td 15:00 ~ 18:30
+              %td ○
+              %td ○
+              %td ○
+              %td ○
+              %td ○
+              %td ○
+              %td ×
+
+  -# .pickup
+  -#   %p Pick Up!
+
+  .sns
+    %h2.header-B Twitter
+    %div
+      %a.twitter-timeline{"data-height" => "300", "data-lang" => "en", "data-theme" => "dark", "data-width" => "300", :href => "https://twitter.com/193hiroshima?ref_src=twsrc%5Etfw"} Tweets by 193hiroshima
+      %script{:async => "", :charset => "utf-8", :src => "https://platform.twitter.com/widgets.js"}
+
+
+
+    %div
+      %a.twitter-timeline{"data-height" => "300", "data-lang" => "en", "data-theme" => "dark", "data-width" => "300", :href => "https://twitter.com/193ujina?ref_src=twsrc%5Etfw"} Tweets by 193ujina
+      %script{:async => "", :charset => "utf-8", :src => "https://platform.twitter.com/widgets.js"}
+
+
+    %div
+      %a.twitter-timeline{"data-height" => "300", "data-lang" => "en", "data-theme" => "dark", "data-width" => "300", :href => "https://twitter.com/kinsei0015?ref_src=twsrc%5Etfw"} Tweets by kinsei0015
+      %script{:async => "", :charset => "utf-8", :src => "https://platform.twitter.com/widgets.js"}
