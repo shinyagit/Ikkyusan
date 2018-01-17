@@ -23,15 +23,20 @@
     transition: all 0.5s;
 
     #brand {
+      display: table;
       font-size: 24px;
       line-height: 60px;
       color: #fff;
       padding: 0 20px;
     }
 
+    .bland-link {
+      text-decoration: none;
+    }
+
     #header-msg {
       width: 100%;
-      padding: 2px 60px 2px 20px;
+      padding: 2px 20px;
       font-size: 12px;
       background-color: #197800;
       border-top: 1px solid #ddd;
@@ -41,7 +46,7 @@
   }
 }
 
-#header-nav {
+#header-nav, #contents-header-nav {
   position: relative;
   z-index: 50;
   width: 100%;
@@ -78,7 +83,6 @@
     }
   }
 }
-
 
 #drw-btn {
   display: none;
@@ -124,7 +128,6 @@
   }
 }
 
-#drw-btn.color .icon-bar {background-color: #333;}
 #drw-layer {
   z-index: 100;
   position: fixed;
@@ -149,14 +152,15 @@
 
 @media screen and (max-width: 800px) {
   #drw-btn {display: block;}
-  #header-nav {
+  #header-nav, #contents-header-nav {
     z-index: 150;
     display: block;
     position: fixed;
     top: 0;
-    right: -250px;
+    right: -240px;
     width: 240px;
     height: 100vh;
+    transition: all 0.5s ease;
 
     ul {
       padding-top: 60px;
@@ -168,7 +172,7 @@
     }
   }
 
-  #header-nav.slide-in {
+  #header-nav.slide-in, #contents-header-nav.slide-in {
     transition: all 0.5s ease;
     right: 0;
   }

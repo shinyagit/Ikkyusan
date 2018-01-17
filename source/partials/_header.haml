@@ -1,6 +1,7 @@
 %header#header
   #header-bar
-    #brand ほねつぎ一休さん
+    = link_to '/', class: 'bland-link' do
+      #brand ほねつぎ一休さん
     #header-msg
       %p
         広島市南区東雲・宇品の接骨院ほねつぎ一休さん【接骨院・整体・マッサージ・鍼灸・整骨院・交通事故対応・各種保険適用】
@@ -13,10 +14,10 @@
 #header-nav
   %ul
     %li= link_to 'ホーム', '/'
-    %li= link_to '交通事故対応', '/'
-    %li= link_to 'スタッフ', '/contents/staff'
-    %li= link_to 'メニュー・料金', '/contents/menu'
-    %li= link_to 'アクセス', '/cntents/location'
+    %li= link_to '交通事故対応', '/contents/accident/'
+    %li= link_to 'スタッフ', '/contents/staff/'
+    %li= link_to 'メニュー・料金', '/contents/menu/'
+    %li= link_to 'アクセス', '/contents/location/'
 #intro
   %p 広島で接骨院をお探しなら、ほねつぎ一休さんへ。
   %p 肩こり・腰痛等でお困りの方はお気軽にご相談ください。

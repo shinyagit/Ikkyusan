@@ -18,3 +18,72 @@ h2.contents-headding {
     margin-top: 60px;
   }
 }
+
+@media screen and (min-width: 800px) {
+  #contents-header-nav {
+    border-top: 1px solid #ddd;
+    margin-top: 60px;
+  }
+}
+
+// ================= contents menu ====================
+#menu-tab {
+  display: flex;
+  margin-top: 40px;
+
+  li {
+    width: 50%;
+
+    a {
+      display: block;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 3;
+      text-decoration: none;
+      background-color: #197800;
+      color: #fff;
+      text-align: center;
+      border: 1px solid #197800;
+      border-bottom: none;
+
+      &.current {
+        background-color: #fff;
+        color: #333;
+      }
+    }
+  }
+}
+
+#menu-contents {
+  padding: 40px 10px 10px;
+  border: 1px solid #197800;
+  border-top: none;
+  font-size: 14px;
+
+  .tab-menu {
+    p {
+      padding-left: 10px;
+      letter-spacing: .1em;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.ggmap {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.ggmap iframe,
+.ggmap object,
+.ggmap embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}

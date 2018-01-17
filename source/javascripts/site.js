@@ -17,12 +17,12 @@ $(function(){
     if(state == false) {
       scrollpos = $(window).scrollTop();
       $('body').addClass('fixed').css({'top': -scrollpos});
-      $("#drw-btn").addClass('open color');
+      $("#drw-btn").addClass('open');
       state = true;
     } else {
       $('body').removeClass('fixed').css({'top': 0});
       window.scrollTo( 0 , scrollpos );
-      $("#drw-btn").removeClass('open color');
+      $("#drw-btn").removeClass('open');
       state = false;
     }
     // $(this).toggleClass('open');
